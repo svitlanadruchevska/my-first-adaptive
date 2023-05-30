@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+a, button, svg, path {
+  transition: 0.3s;
+  cursor: pointer;
+}
+img{
+  display: block;
+  max-width: 100%;
+}
