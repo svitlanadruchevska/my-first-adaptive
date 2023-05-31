@@ -599,6 +599,37 @@ img {
   padding: 15px;
 }
 
+.logo {
+  width: 69px;
+  height: 32px;
+}
+
+.logo____slash {
+  width: 12px;
+  height: 26px;
+}
+
+.content__symbol {
+  position: absolute;
+  top: 0;
+  left: -0.05%;
+  right: 49.03%;
+  bottom: 0;
+  z-index: -1;
+}
+
+.content__desc {
+  color: #fff;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 1.21;
+  text-align: center;
+  z-index: 1;
+  padding-top: 123px;
+  padding-bottom: 261px;
+  margin: 0;
+}
+
 
 
 /*# sourceMappingURL=style.css.map */
