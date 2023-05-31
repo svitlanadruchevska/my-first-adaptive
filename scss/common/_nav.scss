@@ -1,0 +1,141 @@
+.nav {
+  position: absolute;
+  top: 316px;
+  left: 8px;
+  right: 8px;
+  bottom: 0;
+  width: calc(100vw - 16px);
+  height: max-content;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-100%);
+  background: #fff;
+  transition: .5s;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 64px 12px;
+  gap: 20px;
+  border-radius: 12px 12px 0 0;
+
+  #nav-toggler:checked ~ & {
+    transform: translateX(0%);
+    opacity: 1;
+    pointer-events: unset;
+    &:active{
+      padding: 7px;
+      background: var(--grey-separator);
+      border-radius: 8px;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
+  }
+
+  &__link {
+    color: var(--active-regular);
+    display: block;
+    margin-bottom: 14px;
+    font-weight: 700;
+    font-size: 24px;
+    text-decoration: none;
+    line-height: 1.2;
+    background: var(--grey-bg);
+    border-radius: 12px;
+    min-width: calc(100vw - 24px);
+
+    &:hover, &:focus {
+      color: var(--accent);
+    }
+
+    &:active {
+      background: var(--grey-separator);
+    }
+  }
+
+
+  @media screen and (min-width: 767px) {
+    position: static;
+    width: auto;
+    height: auto;
+    transform: translateX(0%);
+    opacity: 1;
+    pointer-events: unset;
+    background: none;
+    flex-direction: row-reverse;
+    padding: 0;
+    &__logo {
+      display: none;
+    }
+    &__list {
+      display: flex;
+      gap: 15px;
+    }
+    &__link {
+      margin-bottom: 0;
+    }
+    &__item {
+      &_mobile-only {
+        display: none;
+      }
+    }
+  }
+}
+
+.nav-switch {
+  position: relative;
+  display: block;
+  min-width: 18px;
+  height: 12px;
+  z-index: 100;
+  margin-left: auto;
+
+  span {
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &:nth-child(1) {
+      top: 0;
+    }
+
+    &:nth-child(2) {
+      top: 6px;
+    }
+
+    &:nth-child(3) {
+      top: 12px;
+    }
+  }
+
+  #nav-toggler:checked ~ & {
+    span {
+      background: #EC6F5D;
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(225deg);
+
+      &:nth-child(2) {
+        transform: translate(-50%, -50%) rotate(-225deg);
+        max-width: 100%;
+      }
+
+      &:nth-child(3) {
+        opacity: 0;
+      }
+    }
+  }
+
+  @media screen and (min-width: 767px) {
+    display: none;
+  }
+}

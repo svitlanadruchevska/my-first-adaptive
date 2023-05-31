@@ -1,0 +1,66 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.contacts {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(245, 245, 250, 0.2);
+  margin: 0;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 15px;
+
+  &__link {
+    text-decoration: none;
+    color: var(--grey-text);
+
+    &_mobile {
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
+    }
+
+    &:hover, &:focus {
+      padding: 5px 7px;
+      background: var(--grey-bg);
+      border-radius: 8px;
+    }
+
+    &:active {
+      padding: 5px 7px;
+      background: var(--accent);
+      border-radius: 8px;
+
+    }
+  }
+}
+
+.contacts-lang, .contacts-desktop {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  list-style: none;
+  padding: 0;
+}
+.pinned{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #fff;
+  width: 100%;
+  padding: 15px;
+}
+
+
