@@ -1,0 +1,26 @@
+.desc-nav{
+  &__list{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap:30px;
+    flex-wrap: nowrap;
+    margin: 0;
+    padding-bottom: 30px;
+    border-bottom: 4px solid  rgba(255, 255, 255, 0.3);
+  }
+  &__item{
+
+  }
+  &__link{
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.23;
+    color: var(--grey-text);
+    white-space: nowrap;
+    &:hover, &:focus {
+      color: var(--accent);
+    }
+  }
+}

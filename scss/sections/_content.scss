@@ -1,8 +1,12 @@
 .content{
   &__symbol{
-    position: absolute;
-    top: 0;
-    left: -0.05%;
+    display: flex;
+    justify-content: center;
+    align-content: stretch;
+    flex-wrap: wrap;
+    position:absolute;
+    top:0;
+    left: -0.5%;
     right: 49.03%;
     bottom: 0;
     z-index: -1;
