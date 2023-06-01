@@ -1,0 +1,19 @@
+.desc-nav-info{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  color: #FFFFFF;
+  padding-top: 30px;
+  &__title{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2;
+    margin: 0;
+  }
+  &__desc{
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 1.58;
+    margin: 0;
+  }
+}
