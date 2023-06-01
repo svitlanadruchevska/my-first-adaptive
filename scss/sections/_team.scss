@@ -1,0 +1,30 @@
+.team {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-top: 30px;
+  position: relative;
+  background: var(--grey-bg);
+
+  &__photo {
+    max-width: 315px;
+    border-radius: 12px 12px 0 0;
+  }
+
+  &__info {
+    margin: 0;
+  }
+  &__creator-1{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.25;
+    color: var(--grey-text);
+    margin: 0;
+  }
+  &__creator-2{
+    font-size: 14px;
+    line-height: 1.57;
+    color: var(--grey-text);
+    margin: -20px 0 30px;
+  }
+}

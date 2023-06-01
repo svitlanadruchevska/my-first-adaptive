@@ -1,0 +1,22 @@
+.btn-list{
+  text-decoration: none;
+  color: var(--active-regular);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.21;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.titles {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.23;
+  background-image: var(--gradient-red-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 10px 0 30px;
+  &_team{
+    margin: 0;
+  }
+}
