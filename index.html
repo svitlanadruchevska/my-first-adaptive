@@ -14,7 +14,7 @@
 <body>
 <header class="header">
     <section class="contacts">
-        <ul class="contacts-lang">
+        <ul class="contacts-all">
             <li class="contacts__item">
                 <a href="#" class="contacts__link">
                     УК
@@ -33,19 +33,20 @@
         </ul>
         <ul class="contacts-desktop">
             <li class="contacts__item">
-                <a href="https://goo.gl/maps/npccWT2TVzdDDV5m7" class="contacts__link contacts__link_mobile"
+                <a href="https://goo.gl/maps/npccWT2TVzdDDV5m7" class="contacts__link contacts__link_mobile
+contacts__link_tablet"
                    target="blank">
                     Kyiv, Mechnikova str, 14/1
 
                 </a>
             </li>
             <li class="contacts__item">
-                <a href="#" class="contacts__link">
+                <a href="#" class="contacts__link contacts__link_phone contacts__link_tablet">
                     0800 211 927
                 </a>
             </li>
             <li class="contacts__item">
-                <a href="#" class="contacts__link contacts__link_mobile">
+                <a href="#" class="contacts__link contacts__link_mobile contacts__link_tablet">
                     <img src="img/fb-grey.svg" alt="facebook">
                 </a>
             </li>
@@ -53,9 +54,12 @@
     </section>
     <section class="pinned">
         <a href="#" class="logo">
-            <img src="img/logo.svg" alt="logo">
+            <img src="img/logo.svg" class="header-logo" alt="logo">
         </a>
-        <img src="img/slash.svg" class="logo__slash" alt="">
+        <img src="img/slash.svg" class="slash" alt="">
+        <a href="#" class="pinned__section">
+            services
+        </a>
         <input type="checkbox" id="nav-toggler" class="visually-hidden">
         <nav class="nav">
             <ul class="nav__list">
@@ -141,7 +145,7 @@
         <h2 class="titles">
             What can we do better than others?
         </h2>
-        <section>
+        <section class="services-grid">
             <article class="services__item">
                 <img class="icon" src="img/ecommerce.svg" alt="icon">
                 <a href="#" class="services__link">
@@ -178,7 +182,7 @@
                 </p>
             </article>
             <article class="services__item">
-                ,<img class="icon" src="img/trust.svg" alt="icon">
+                <img class="icon" src="img/trust.svg" alt="icon">
                 <a href="#" class="services__link">
                     IT and e-commerce
                 </a>
@@ -216,7 +220,7 @@
     </section>
 </main>
 <section class="desc center">
-    <img src="img/photo.jpg" class="decs__photo" alt="photo">
+    <img src="img/image-2.jpg" class="decs__photo" alt="photo">
     <div class="desc-all">
         <a href="#" class="btn-desc">
             команда >
@@ -283,59 +287,100 @@
                 <img class="partners__logo" src="img/adtelligent.svg" alt="adtelligent">
             </a>
         </li>
+        <li class="partners__item">
+            <a href="#" class="partners__link">
+                <img class="partners__logo" src="img/clickky.svg" alt="adtelligent">
+            </a>
+        </li>
+        <li class="partners__item">
+            <a href="#" class="partners__link">
+                <img class="partners__logo" src="img/eco-leasing.svg" alt="adtelligent">
+            </a>
+        </li>
+        <li class="partners__item">
+            <a href="#" class="partners__link">
+                <img class="partners__logo" src="img/ingratek.svg" alt="adtelligent">
+            </a>
+        </li>
+        <li class="partners__item">
+            <a href="#" class="partners__link">
+                <img class="partners__logo" src="img/city-par.svg" alt="adtelligent">
+            </a>
+        </li>
+        <li class="partners__item">
+            <a href="#" class="partners__link">
+                <img class="partners__logo" src="img/artprint.svg" alt="adtelligent">
+            </a>
+        </li>
+        <li class="partners__item">
+            <a href="#" class="partners__link">
+                <img class="partners__logo" src="img/ultimatecard.svg" alt="adtelligent">
+            </a>
+        </li>
     </ul>
 </section>
 <section class="desc center desc_recommendations">
-    <a href="#" class="btn-desc">
-        Publications >
-    </a>
-    <h2 class="titles titles_desc">
-        We have something to tell
-    </h2>
-    <div class="desc desc_recommendations-all">
-        <img src="img/cover.jpg" class="deck__photo" alt="cover">
-        <div class="desc-all desc-all_recommendations">
-            <a href="#" class="btn-desc">
-                Equity associate
-            </a>
-            <p class="desc__info-1 desc__info-1_recommendations">
-                April 22
-            </p>
-            <p class="desc__info-3">
-                I'm a jun on projects. I am a co-owner of a law firm. How it happened. Before entering my parents told
-                me
-                that if I…
-            </p>
+    <div class="desc-cell">
+        <a href="#" class="btn-desc">
+            Publications >
+        </a>
+        <h2 class="titles titles_desc">
+            We have something to tell
+        </h2>
+    </div>
+    <div class="desc-cell">
+        <div class="desc desc_recommendations-all">
+            <img src="img/cover.jpg" class="deck__photo" alt="cover">
+            <div class="desc-all desc-all_recommendations">
+                <a href="#" class="btn-desc">
+                    Equity associate
+                </a>
+                <p class="desc__info-1 desc__info-1_recommendations">
+                    April 22
+                </p>
+                <p class="desc__info-3">
+                    I'm a jun on projects. I am a co-owner of a law firm. How it happened. Before entering my parents
+                    told
+                    me
+                    that if I…
+                </p>
+            </div>
         </div>
     </div>
-    <div class="desc desc_recommendations-all">
-        <img src="img/cover-2.jpg" class="deck__photo" alt="cover">
-        <div class="desc-all desc-all_recommendations">
-            <a href="#" class="btn-desc">
-                Penalty for the Good Corporation: what will happen to Google and others for violating the GDPR
-            </a>
-            <p class="desc__info-1 desc__info-1_recommendations">
-                September 29
-            </p>
-            <p class="desc__info-3">
-                And why the recovery of 50 million euros could be a fateful precedent According to Mind.ua January 21
-                National Commission for Data Protection.
-            </p>
+    <div class="desc-cell">
+        <div class="desc desc_recommendations-all">
+            <img src="img/cover-2.jpg" class="deck__photo" alt="cover">
+            <div class="desc-all desc-all_recommendations">
+                <a href="#" class="btn-desc">
+                    Penalty for the Good Corporation: what will happen to Google and others for violating the GDPR
+                </a>
+                <p class="desc__info-1 desc__info-1_recommendations">
+                    September 29
+                </p>
+                <p class="desc__info-3">
+                    And why the recovery of 50 million euros could be a fateful precedent According to Mind.ua January
+                    21
+                    National Commission for Data Protection.
+                </p>
+            </div>
         </div>
     </div>
-    <div class="desc desc_recommendations-all">
-        <img src="img/cover-3.jpg" class="deck__photo" alt="cover">
-        <div class="desc-all desc-all_recommendations">
-            <a href="#" class="btn-desc">
-                Millennial Testament
-            </a>
-            <p class="desc__info-1 desc__info-1_recommendations">
-                August 19
-            </p>
-            <p class="desc__info-3">
-                What and how modern vloggers, opinion leaders and crypto-millionaires will inherit A typical legacy of
-                the Ukrainian generation X looks like this: an apartment in…
-            </p>
+    <div class="desc-cell">
+        <div class="desc desc_recommendations-all">
+            <img src="img/cover-3.jpg" class="deck__photo" alt="cover">
+            <div class="desc-all desc-all_recommendations">
+                <a href="#" class="btn-desc">
+                    Millennial Testament
+                </a>
+                <p class="desc__info-1 desc__info-1_recommendations">
+                    August 19
+                </p>
+                <p class="desc__info-3">
+                    What and how modern vloggers, opinion leaders and crypto-millionaires will inherit A typical legacy
+                    of
+                    the Ukrainian generation X looks like this: an apartment in…
+                </p>
+            </div>
         </div>
     </div>
 </section>

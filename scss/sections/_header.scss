@@ -7,18 +7,24 @@
   top: 0;
   left: 0;
   width: 100%;
+  @media screen and (min-width: 520px) {
+    padding: 60px;
+  }
 
   &:before {
     content: "";
     position: absolute;
-    background: url("../img/symbol.svg") top center no-repeat;
+    background: url("../../img/symbol.svg") top center no-repeat;
     top: 0;
     width: 100%;
     left: -0.05%;
     right: 49.03%;
     height: 600px;
     z-index: -1;
-
+    @media screen and (min-width: 520px) {
+      background: url("../../img/symbol-2.svg") top center no-repeat;
+      height: 1024px;
+    }
   }
 }
 
@@ -34,14 +40,50 @@
   left: 0;
   width: 100%;
   padding: 0 15px;
+  @media screen and (min-width: 520px) {
+    background: inherit;
+    justify-content: left;
+    gap: 18px;
+  }
+
+  &__item {
+    position: relative;
+
+    &::marker {
+      @media screen and (min-width: 520px) {
+        position: relative;
+        top: calc(50% - 13px);
+      }
+    }
+  }
 
   &__link {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.25;
+    letter-spacing: 1px;
     text-decoration: none;
-    color: var(--grey-text);
+    color: #fff;
+
+    &_tablet {
+      @media screen and (min-width: 520px) {
+        list-style: disc;
+      }
+    }
+
+    &_phone {
+      font-size: 16px;
+    }
 
     &_mobile {
-      @media screen and (max-width: 767px) {
+      @media screen and (max-width: 520px) {
         display: none;
+      }
+      @media screen and (min-width: 520px) {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.25;
+        color: var(--grey-text);
       }
     }
 
@@ -60,13 +102,23 @@
   }
 }
 
-.contacts-lang, .contacts-desktop {
+.contacts-all, .contacts-desktop {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 6px;
   list-style: none;
   padding: 0;
+}
+
+.contacts-desktop {
+  @media screen and (min-width: 520px) {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 4px;
+    gap: 18px;
+  }
 }
 
 .pinned {
@@ -76,15 +128,39 @@
   color: #fff;
   width: 100%;
   padding: 15px;
+  @media screen and (min-width: 520px) {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  &__section {
+    font-size: 20px;
+    line-height: 1.2;
+    text-decoration: none;
+    color: #fff;
+    @media screen and (min-width: 520px) {
+      display: none;
+    }
+  }
 }
 
 .logo {
   width: 69px;
   height: 32px;
 
-  &____slash {
+  &__slash {
     width: 12px;
     height: 26px;
+  }
+}
+
+.header-logo {
+  @media screen and (min-width: 520px) {
+    min-width: 130px;
+    min-height: 60px;
   }
 }
 

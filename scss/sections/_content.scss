@@ -8,5 +8,12 @@
     padding-top: 123px;
     padding-bottom: 261px;
     margin: 0;
+    @media screen and (min-width: 520px){
+      display: flex;
+      justify-content: center;
+      padding: 269px 0 549px;
+      white-space: nowrap;
+      width: 100%;
+    }
   }
 }

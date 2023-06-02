@@ -23,4 +23,9 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin: 0;
+  padding: 10px 0 60px;
+  &_desc{
+    margin:0;
+    padding-bottom: 0;
+  }
 }

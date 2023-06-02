@@ -24,6 +24,10 @@
     line-height: 1.23;
     color: var(--grey-text);
     white-space: nowrap;
+    @media screen and (min-width: 520px) {
+      font-size: 38px;
+      line-height: 1.21;
+    }
 
     &:hover, &:focus {
       background-image: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);

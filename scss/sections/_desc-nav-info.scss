@@ -15,5 +15,8 @@
     font-size: 19px;
     line-height: 1.58;
     margin: 0 0 30px;
+    @media screen and (min-width: 520px){
+      margin-bottom: 60px;
+    }
   }
 }
