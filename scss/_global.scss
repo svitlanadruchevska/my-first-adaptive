@@ -4,7 +4,8 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background: var(--gradient-supersoft) no-repeat center center fixed;
+  background:var(--gradient-supersoft) center center fixed no-repeat;
+  /*background-blend-mode: overlay;*/
 }
 
 a, button, svg, path {
@@ -57,7 +58,5 @@ img {
 }
 
 main {
-
-
 
 }

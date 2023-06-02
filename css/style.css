@@ -332,7 +332,8 @@ template {
 
 body {
   font-family: "Montserrat", sans-serif;
-  background: var(--gradient-supersoft) no-repeat center center fixed;
+  background: var(--gradient-supersoft) center center fixed no-repeat;
+  /*background-blend-mode: overlay;*/
 }
 
 a, button, svg, path {
@@ -402,6 +403,14 @@ img {
   letter-spacing: 1px;
   text-transform: uppercase;
   padding-top: 30px;
+}
+
+.btn-desc:hover, .btn-desc:focus {
+  color: var(--accent);
+}
+
+.btn-desc:active {
+  text-decoration-line: underline;
 }
 
 .titles {
@@ -565,6 +574,18 @@ img {
   width: 100%;
 }
 
+.header:before {
+  content: "";
+  position: absolute;
+  background: url("../img/symbol.svg") top center no-repeat;
+  top: 0;
+  width: 100%;
+  left: -0.05%;
+  right: 49.03%;
+  height: 600px;
+  z-index: -1;
+}
+
 .contacts {
   display: flex;
   flex-direction: row;
@@ -629,26 +650,12 @@ img {
   height: 26px;
 }
 
-.content__symbol {
-  display: flex;
-  justify-content: center;
-  align-content: stretch;
-  flex-wrap: wrap;
-  position: absolute;
-  top: 0;
-  left: -0.5%;
-  right: 49.03%;
-  bottom: 0;
-  z-index: -1;
-}
-
 .content__desc {
   color: #fff;
   font-weight: 700;
   font-size: 38px;
   line-height: 1.21;
   text-align: center;
-  z-index: 1;
   padding-top: 123px;
   padding-bottom: 261px;
   margin: 0;
@@ -905,6 +912,8 @@ img {
 }
 
 .partners {
+  padding: 0;
+  margin: 0;
   background: #FFFFFF;
 }
 
@@ -914,7 +923,8 @@ img {
   line-height: 1.21;
   letter-spacing: 1px;
   text-transform: uppercase;
-  margin: 0;
+  text-align: center;
+  margin: 0 0 30px;
 }
 
 .partners__list {
@@ -922,6 +932,7 @@ img {
   flex-direction: column;
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .partners__item {
@@ -997,6 +1008,10 @@ img {
   line-height: 1.25;
 }
 
+.footer__link:hover, .footer__link:focus {
+  color: var(--accent);
+}
+
 .footer__link:first-child {
   width: 100%;
   padding-top: 30px;
@@ -1011,6 +1026,10 @@ img {
   letter-spacing: 1px;
   text-transform: uppercase;
   color: var(--active-regular);
+}
+
+.footer__link:nth-child(3) {
+  transform: rotate(360deg);
 }
 
 .footer__link:nth-child(4) {

@@ -1,23 +1,10 @@
 .content{
-  &__symbol{
-    display: flex;
-    justify-content: center;
-    align-content: stretch;
-    flex-wrap: wrap;
-    position:absolute;
-    top:0;
-    left: -0.5%;
-    right: 49.03%;
-    bottom: 0;
-    z-index: -1;
-  }
   &__desc{
     color: #fff;
     font-weight: 700;
     font-size: 38px;
     line-height: 1.21;
     text-align: center;
-    z-index: 1;
     padding-top: 123px;
     padding-bottom: 261px;
     margin: 0;

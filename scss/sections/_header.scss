@@ -7,7 +7,21 @@
   top: 0;
   left: 0;
   width: 100%;
+
+  &:before {
+    content: "";
+    position: absolute;
+    background: url("../img/symbol.svg") top center no-repeat;
+    top: 0;
+    width: 100%;
+    left: -0.05%;
+    right: 49.03%;
+    height: 600px;
+    z-index: -1;
+
+  }
 }
+
 .contacts {
   display: flex;
   flex-direction: row;
@@ -54,7 +68,8 @@
   list-style: none;
   padding: 0;
 }
-.pinned{
+
+.pinned {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -62,10 +77,12 @@
   width: 100%;
   padding: 15px;
 }
-.logo{
+
+.logo {
   width: 69px;
   height: 32px;
-  &____slash{
+
+  &____slash {
     width: 12px;
     height: 26px;
   }
