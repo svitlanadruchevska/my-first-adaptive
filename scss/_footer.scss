@@ -1,0 +1,51 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--grey-bg);
+  gap: 10px;
+  margin: 0;
+
+  &__link {
+    text-decoration: none;
+    text-align: center;
+    line-height: 1.25;
+
+    &:first-child {
+      width: 100%;
+      padding-top: 30px;
+      border-top: 2px solid var(--grey-separator);
+      font-size: 16px;
+      color: var(--main-regular);
+    }
+
+    &:nth-child(2) {
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--active-regular);
+    }
+
+    &:nth-child(3) {
+
+    }
+
+    &:nth-child(4) {
+      font-weight: 700;
+      color: var(--main-alt);
+    }
+
+    &:nth-child(5) {
+      font-weight: 700;
+      color: var(--active-regular);
+    }
+  }
+
+  &__company {
+    font-weight: 400;
+    color: var(--grey-text);
+  }
+}
+
