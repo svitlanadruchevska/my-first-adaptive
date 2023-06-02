@@ -13,6 +13,8 @@
 }
 
 .services {
+  position: relative;
+
   &__item {
     display: flex;
     flex-direction: column;
@@ -25,6 +27,10 @@
     font-weight: 700;
     font-size: 22px;
     line-height: 1.2;
+
+    &:hover, &:focus {
+      color: var(--accent);
+    }
   }
 
   &__desc {
@@ -37,5 +43,31 @@
   &:last-child {
     padding-bottom: 60px;
     border-radius: 0 0 12px 12px;
+  }
+
+  &:before {
+    content: "";
+    background: #CACADB;
+    border-radius: 0 0 12px 12px;
+    position: absolute;
+    height: 10px;
+    bottom: -10px;
+    left: 50%;
+    width: calc(100vw - 40px);
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+
+  &:after {
+    content: "";
+    background: #E7E7F2;
+    border-radius: 0 0 12px 12px;
+    position: absolute;
+    height: 10px;
+    bottom: -20px;
+    left: 50%;
+    width: calc(100vw - 80px);
+    transform: translateX(-50%);
+    z-index: 1;
   }
 }

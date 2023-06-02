@@ -333,8 +333,6 @@ template {
 body {
   font-family: "Montserrat", sans-serif;
   background: var(--gradient-supersoft) no-repeat center center fixed;
-  border-bottom-right-radius: 12px;
-  border-bottom-left-radius: 12px;
 }
 
 a, button, svg, path {
@@ -704,6 +702,9 @@ img {
   transition: 1s;
 }
 
+.services {
+  position: relative;
+}
 .services__item {
   display: flex;
   flex-direction: column;
@@ -716,6 +717,9 @@ img {
   font-size: 22px;
   line-height: 1.2;
 }
+.services__link:hover, .services__link:focus {
+  color: var(--accent);
+}
 .services__desc {
   color: #fff;
   font-size: 16px;
@@ -726,14 +730,34 @@ img {
   padding-bottom: 60px;
   border-radius: 0 0 12px 12px;
 }
+.services:before {
+  content: "";
+  background: #CACADB;
+  border-radius: 0 0 12px 12px;
+  position: absolute;
+  height: 10px;
+  bottom: -10px;
+  left: 50%;
+  width: calc(100vw - 40px);
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.services:after {
+  content: "";
+  background: #E7E7F2;
+  border-radius: 0 0 12px 12px;
+  position: absolute;
+  height: 10px;
+  bottom: -20px;
+  left: 50%;
+  width: calc(100vw - 80px);
+  transform: translateX(-50%);
+  z-index: 1;
+}
 
 .team {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  padding-top: 30px;
-  position: relative;
-  background: var(--grey-bg);
+  background: #fff;
+  padding-top: 50px;
 }
 .team__photo {
   max-width: 315px;
@@ -754,6 +778,61 @@ img {
   line-height: 1.57;
   color: var(--grey-text);
   margin: -20px 0 30px;
+}
+
+.team-all {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+  background: var(--grey-bg);
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  padding: 30px;
+}
+
+.team-radio {
+  text-align: center;
+  padding: 30px 0 60px;
+}
+
+.radio {
+  display: none;
+}
+
+.team-input {
+  position: relative;
+  display: inline-block;
+  padding-left: 31px;
+}
+.team-input:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: 0;
+  background: var(--active-regular);
+  opacity: 0.2;
+  border-radius: 50%;
+}
+.team-input:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: 0;
+  background: var(--active-regular);
+  border-radius: 50%;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.radio:checked + .team-input:after {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=style.css.map */

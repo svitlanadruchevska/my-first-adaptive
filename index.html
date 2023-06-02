@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -217,7 +217,8 @@
     </section>
 </main>
 <section class="team center">
-    <img src="img/photo.jpg" class="team__photo" alt="photo">
+        <img src="img/photo.jpg" class="team__photo" alt="photo">
+    <div class="team-all">
         <a href="#" class="btn-list">
             команда >
         </a>
@@ -232,7 +233,21 @@
         <p class="team__creator-2">
             Керуючий партнер
         </p>
-
+    </div>
+    <div class="team-radio">
+        <label>
+            <input type="radio" name="team" checked class="radio">
+            <span class="team-input"></span>
+        </label>
+        <label>
+            <input type="radio" name="team" class="radio">
+            <span class="team-input"></span>
+        </label>
+        <label>
+            <input type="radio" name="team" class="radio">
+            <span class="team-input"></span>
+        </label>
+    </div>
 </section>
 </body>
 </html>
