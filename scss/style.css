@@ -393,7 +393,7 @@ img {
   overflow: hidden;
 }
 
-.btn-list {
+.btn-desc {
   text-decoration: none;
   color: var(--active-regular);
   font-weight: 700;
@@ -401,6 +401,7 @@ img {
   line-height: 1.21;
   letter-spacing: 1px;
   text-transform: uppercase;
+  padding-top: 30px;
 }
 
 .titles {
@@ -410,9 +411,6 @@ img {
   background-image: var(--gradient-red-text);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin: 10px 0 30px;
-}
-.titles_team {
   margin: 0;
 }
 
@@ -755,32 +753,53 @@ img {
   z-index: 1;
 }
 
-.team {
+.desc {
   background: #fff;
   padding-top: 50px;
 }
-.team__photo {
+.desc_recommendations {
+  display: flex;
+  flex-direction: column;
+  background: var(--grey-bg);
+  gap: 30px;
+  padding-top: 0;
+}
+.desc_recommendations-all {
+  padding: 0;
+  border-radius: 12px;
+}
+.desc__photo {
   max-width: 315px;
   border-radius: 12px 12px 0 0;
 }
-.team__info {
+.desc__info {
   margin: 0;
 }
-.team__creator-1 {
+.desc__info-1 {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.25;
   color: var(--grey-text);
   margin: 0;
 }
-.team__creator-2 {
+.desc__info-1__recommendations {
+  margin: 15px;
+}
+.desc__info-2 {
   font-size: 14px;
   line-height: 1.57;
   color: var(--grey-text);
   margin: -20px 0 30px;
 }
+.desc__info-3 {
+  font-size: 14px;
+  line-height: 1.57;
+  padding-top: 15px;
+  border-top: 4px solid var(--grey-separator);
+  margin: 0;
+}
 
-.team-all {
+.desc-all {
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -788,10 +807,15 @@ img {
   background: var(--grey-bg);
   border-bottom-right-radius: 12px;
   border-bottom-left-radius: 12px;
-  padding: 30px;
+  padding: 0 30px;
+}
+.desc-all_recommendations {
+  background: #FFFFFF;
+  gap: 15px;
+  padding: 0 30px 30px;
 }
 
-.team-radio {
+.desc-radio {
   text-align: center;
   padding: 30px 0 60px;
 }
@@ -800,12 +824,12 @@ img {
   display: none;
 }
 
-.team-input {
+.desc-input {
   position: relative;
   display: inline-block;
   padding-left: 31px;
 }
-.team-input:before {
+.desc-input:before {
   content: "";
   display: inline-block;
   position: absolute;
@@ -817,7 +841,7 @@ img {
   opacity: 0.2;
   border-radius: 50%;
 }
-.team-input:after {
+.desc-input:after {
   content: "";
   display: block;
   position: absolute;
@@ -831,7 +855,7 @@ img {
   transition: 0.3s;
 }
 
-.radio:checked + .team-input:after {
+.radio:checked + .desc-input:after {
   opacity: 1;
 }
 

@@ -1,4 +1,4 @@
-.btn-list{
+.btn-desc{
   text-decoration: none;
   color: var(--active-regular);
   font-weight: 700;
@@ -6,6 +6,7 @@
   line-height: 1.21;
   letter-spacing: 1px;
   text-transform: uppercase;
+  padding-top: 30px;
 }
 
 .titles {
@@ -15,8 +16,5 @@
   background-image: var(--gradient-red-text);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin: 10px 0 30px;
-  &_team{
-    margin: 0;
-  }
+  margin: 0;
 }
