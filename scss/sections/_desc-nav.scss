@@ -1,5 +1,9 @@
 .desc-nav {
   overflow-x: auto;
+  @media screen and (min-width: 890px){
+    overflow-x: visible;
+    padding-bottom: 60px;
+  }
 
   &__list {
     list-style: none;
@@ -11,9 +15,12 @@
     padding-bottom: 30px;
     border-bottom: 4px solid rgba(255, 255, 255, 0.3);
     scroll-snap-type: x mandatory;
-    @media screen and (min-width: 767px){
+    @media screen and (min-width: 890px){
       flex-direction: column;
-      padding: 0;
+      padding: 0 60px 0 0;
+      scroll-snap-type: none;
+      border-bottom: none;
+      border-right: 4px solid rgba(255, 255, 255, 0.3);
     }
   }
 
@@ -38,5 +45,11 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
+  }
+}
+.desc-nav-all{
+  @media screen and (min-width:890px){
+    display: flex;
+    gap: 60px;
   }
 }

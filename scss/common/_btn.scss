@@ -1,4 +1,4 @@
-.btn-desc{
+.btn-desc {
   text-decoration: none;
   color: var(--active-regular);
   font-weight: 700;
@@ -7,10 +7,12 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   padding-top: 30px;
-  &:hover, &:focus{
+
+  &:hover, &:focus {
     color: var(--accent);
   }
-  &:active{
+
+  &:active {
     text-decoration-line: underline;
   }
 }
@@ -24,8 +26,14 @@
   -webkit-text-fill-color: transparent;
   margin: 0;
   padding: 10px 0 60px;
-  &_desc{
-    margin:0;
+
+  &_desc {
+    margin: 0;
     padding-bottom: 0;
+  }
+
+  @media screen and (min-width: 890px) {
+    font-size: 38px;
+    line-height: 1.21;
   }
 }

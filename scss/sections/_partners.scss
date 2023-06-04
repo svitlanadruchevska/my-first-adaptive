@@ -30,7 +30,11 @@
       grid-template-columns: repeat(3, calc(33%));
       grid-template-rows: repeat(4, 120px);
       gap: 0;
-      height: 480px;
+      height: max-content;
+    }
+    @media screen and (min-width: 1250px){
+      grid-template-columns: repeat(4, calc(25%));
+      grid-template-rows: repeat(3, 120px);
     }
   }
 
