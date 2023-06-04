@@ -11,9 +11,12 @@
     @media screen and (min-width: 520px){
       display: flex;
       justify-content: center;
-      padding: 269px 0 549px;
+      padding: 209px 0 549px;
       white-space: nowrap;
       width: 100%;
+    }
+    @media screen and (min-width: 767px) {
+      padding: 185px 0 421px;
     }
   }
 }

@@ -11,6 +11,10 @@
     padding-bottom: 30px;
     border-bottom: 4px solid rgba(255, 255, 255, 0.3);
     scroll-snap-type: x mandatory;
+    @media screen and (min-width: 767px){
+      flex-direction: column;
+      padding: 0;
+    }
   }
 
   &__item {
