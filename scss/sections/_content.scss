@@ -1,5 +1,5 @@
-.content{
-  &__desc{
+.content {
+  &__desc {
     color: #fff;
     font-weight: 700;
     font-size: 38px;
@@ -8,7 +8,7 @@
     padding-top: 123px;
     padding-bottom: 261px;
     margin: 0;
-    @media screen and (min-width: 520px){
+    @media screen and (min-width: 520px) {
       display: flex;
       justify-content: center;
       padding: 209px 0 549px;
@@ -17,6 +17,32 @@
     }
     @media screen and (min-width: 767px) {
       padding: 185px 0 421px;
+    }
+  }
+}
+
+.content-publications {
+  background: #fff;
+
+  &__list {
+    padding-bottom: 30px;
+    margin: 0;
+  }
+
+  &__item {
+    margin-bottom: 15px;
+    font-size: 18px;
+    line-height: 1.44;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::marker {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 1.44;
     }
   }
 }

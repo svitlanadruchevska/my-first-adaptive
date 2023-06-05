@@ -25,9 +25,15 @@
       background: url("../../img/symbol-2.svg") top center no-repeat;
       height: 1024px;
     }
-    @media screen and (min-width: 520px){
+    @media screen and (min-width: 520px) {
       background: url("../../img/symbol-3.svg") top center no-repeat;
       height: 768px;
+    }
+  }
+
+  &_publications {
+    &:before {
+      display: none;
     }
   }
 }
@@ -43,7 +49,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: 0 15px;
+  padding: 15px;
   @media screen and (min-width: 520px) {
     background: inherit;
     justify-content: left;
@@ -111,6 +117,10 @@
       border-radius: 8px;
 
     }
+
+    &_publications {
+      color: var(--grey-text);
+    }
   }
 }
 
@@ -152,8 +162,8 @@
   flex-direction: row;
   align-items: center;
   color: #fff;
-  width: 100%;
-  padding: 15px 0;
+  width: calc(100% - 15px);
+  padding: 15px;
   @media screen and (min-width: 520px) {
     position: relative;
     display: flex;
@@ -177,26 +187,37 @@
     @media screen and (min-width: 520px) {
       display: none;
     }
+
+    &_publications {
+      color: var(--main-regular);
+      padding-left: 6px;
+    }
+  }
+
+  &_publications {
+    background: #FFFFFF;
+    width: 100%;
   }
 }
 
 .logo {
   width: 69px;
   height: 32px;
+  padding-right: 6px;
+}
 
-  &__slash {
-    width: 12px;
-    height: 26px;
-  }
+.slash {
+  width: 12px;
+  height: 26px;
 }
 
 .header-logo {
   @media screen and (min-width: 520px) {
     min-width: 130px;
     min-height: 60px;
-    padding-top: 30px;
+    margin-top: -10px;
   }
-  @media screen and (min-width: 520px){
+  @media screen and (min-width: 767px) {
     padding-top: 0;
     margin-top: -24px;
   }

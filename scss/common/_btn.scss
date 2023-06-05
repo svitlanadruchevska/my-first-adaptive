@@ -15,6 +15,12 @@
   &:active {
     text-decoration-line: underline;
   }
+
+  &_publications {
+    color: var(--main-regular);
+    font-size: 20px;
+    line-height: 1.2;
+  }
 }
 
 .titles {
@@ -30,10 +36,19 @@
   &_desc {
     margin: 0;
     padding-bottom: 0;
+
+    &_publications {
+      color: var(--main-alt);
+      padding-bottom: 15px;
+    }
   }
 
   @media screen and (min-width: 890px) {
     font-size: 38px;
     line-height: 1.21;
+  }
+
+  &_publications {
+    padding-bottom: 30px;
   }
 }

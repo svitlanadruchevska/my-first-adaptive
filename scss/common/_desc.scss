@@ -29,11 +29,16 @@
       grid-template-rows: 73px auto;
       align-self: flex-end;
     }
+    &_publications {
+      border-radius: 12px 12px 0 0;
+      padding-top: 30px;
+    }
   }
 
   &_recommendations-all {
     padding: 0;
     border-radius: 12px;
+    height: 100%;
     @media screen and (min-width: 767px) {
       display: flex;
       flex-direction: column;
@@ -64,9 +69,12 @@
     line-height: 1.25;
     color: var(--grey-text);
     margin: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 
     &_recommendations {
-      margin: 15px;
+      font-size: 12px;
+      /*margin: 15px;*/
     }
   }
 
@@ -83,6 +91,17 @@
     padding-top: 15px;
     border-top: 4px solid var(--grey-separator);
     margin: 0;
+
+    &_publications {
+      border: none;
+      padding: 0 0 30px;
+    }
+
+    &_light {
+      border: none;
+      color: var(--grey-text);
+      padding: 15px 0 30px;
+    }
   }
 
 }
@@ -109,6 +128,15 @@
     @media screen and (min-width: 767px) {
       width: 100%;
     }
+
+    &_page {
+      background: #fff;
+      padding: 0;
+    }
+  }
+
+  &__publications {
+    background: #fff;
   }
 }
 
@@ -208,6 +236,11 @@
   height: 200px;
   object-fit: cover;
   border-radius: 12px 12px 0 0;
+
+  &_page {
+    border-radius: 12px;
+    height: 300px;
+  }
 }
 
 

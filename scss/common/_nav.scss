@@ -32,11 +32,19 @@
   }
 
   &__list {
+    display: flex;
+    flex-direction: column;
     list-style: none;
     text-align: center;
     margin: 0;
     padding: 0;
-    gap: 10px;
+    gap: 15px;
+    @media screen and (min-width: 520px) {
+      flex-direction: row;
+    }
+    @media screen and (min-width: 767px) {
+      padding-top: 16px;
+    }
   }
 
   &__link {
@@ -50,6 +58,11 @@
     background: var(--grey-bg);
     border-radius: 12px;
     min-width: calc(100vw - 24px);
+    @media screen and (min-width: 520px) {
+      margin-bottom: 0;
+      background: none;
+      min-width: min-content;
+    }
 
     &:hover, &:focus {
       color: var(--accent);
@@ -77,30 +90,12 @@
     padding: 0;
   }
 
-  &__list {
-    display: flex;
-    gap: 15px;
-    @media screen and (min-width: 520px) {
-      padding-top: 30px;
-    }
-    @media screen and (min-width: 767px) {
-      padding-top: 16px;
-    }
-  }
-
-  &__link {
-    margin-bottom: 0;
-    background: none;
-    min-width: min-content;
-  }
-
   &__item {
     &_mobile-only {
       display: none;
     }
   }
 }
-
 
 .slash {
   @media screen and (min-width: 520px) {
@@ -116,30 +111,8 @@
   z-index: 100;
   margin-left: auto;
 
-  span {
-    width: 100%;
-    height: 2px;
-    background: #fff;
-    display: block;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-
-    &:nth-child(1) {
-      top: 0;
-    }
-
-    &:nth-child(2) {
-      top: 6px;
-    }
-
-    &:nth-child(3) {
-      top: 12px;
-    }
-  }
-
   #nav-toggler:checked ~ & {
-    span {
+    .span {
       background: #EC6F5D;
       top: 50%;
       transform: translate(-50%, -50%) rotate(225deg);
@@ -159,4 +132,31 @@
     display: none;
   }
 }
+
+
+.span {
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  &:nth-child(1) {
+    top: 0;
+  }
+
+  &:nth-child(2) {
+    top: 6px;
+  }
+
+  &:nth-child(3) {
+    top: 12px;
+  }
+  &_publications{
+    background: var(--main-regular);
+  }
+}
+
 
