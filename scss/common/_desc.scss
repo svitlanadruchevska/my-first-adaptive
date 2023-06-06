@@ -19,7 +19,7 @@
       display: grid;
       grid-template-columns: repeat(2, calc(50% - 30px));
       grid-template-rows: 73px auto auto;
-      justify-items: center;
+      justify-items: start;
       justify-content: center;
       padding-top: 30px;
     }
@@ -29,8 +29,9 @@
       grid-template-rows: 73px auto;
       align-self: flex-end;
     }
+
     &_publications {
-      border-radius: 12px 12px 0 0;
+      border-radius: 12px;
       padding-top: 30px;
     }
   }
@@ -74,7 +75,6 @@
 
     &_recommendations {
       font-size: 12px;
-      /*margin: 15px;*/
     }
   }
 
@@ -95,6 +95,9 @@
     &_publications {
       border: none;
       padding: 0 0 30px;
+      @media screen and (min-width: 890px) {
+        font-size: 16px;
+      }
     }
 
     &_light {
@@ -125,6 +128,7 @@
     background: #FFFFFF;
     gap: 15px;
     padding: 0 30px 30px;
+    border-radius: 12px;
     @media screen and (min-width: 767px) {
       width: 100%;
     }
@@ -240,6 +244,10 @@
   &_page {
     border-radius: 12px;
     height: 300px;
+    width: 100%;
+    @media screen and (min-width: 890px) {
+      height: 500px;
+    }
   }
 }
 

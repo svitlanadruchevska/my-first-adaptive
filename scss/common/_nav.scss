@@ -45,6 +45,9 @@
     @media screen and (min-width: 767px) {
       padding-top: 16px;
     }
+    &_publications{
+      padding-top: 0;
+    }
   }
 
   &__link {
@@ -58,23 +61,60 @@
     background: var(--grey-bg);
     border-radius: 12px;
     min-width: calc(100vw - 24px);
+    position: relative;
+
+    &:after {
+      @media screen and (min-width: 520px) {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -5px;
+        background: var(--accent);
+        height: 2px;
+        width: 0;
+        z-index: -1;
+        border-radius: 100px;
+        opacity: 0;
+        transition: width 0.8s;
+      }
+    }
+
+    &:hover:after {
+      @media screen and (min-width: 520px) {
+        width: 100%;
+        opacity: 1;
+      }
+    }
+
     @media screen and (min-width: 520px) {
       margin-bottom: 0;
       background: none;
       min-width: min-content;
+      color: #FFFFFF;
+      font-size: 16px;
+
     }
 
-    &:hover, &:focus {
+    &:hover {
       color: var(--accent);
     }
 
     &:active {
       background: var(--grey-separator);
+      text-decoration: underline;
+      @media screen and (min-width: 520px) {
+        text-decoration: underline;
+        background: inherit;
+      }
     }
 
-    @media screen and (min-width: 520px) {
-      color: #FFFFFF;
-      font-size: 16px;
+    &_publications {
+      color: var(--active-regular);
+
+      &_active {
+        color: var(--accent);
+        text-decoration: underline;
+      }
     }
   }
 
@@ -100,6 +140,10 @@
 .slash {
   @media screen and (min-width: 520px) {
     display: none;
+  }
+
+  &_publications {
+    display: flex;
   }
 }
 
@@ -133,7 +177,6 @@
   }
 }
 
-
 .span {
   width: 100%;
   height: 2px;
@@ -154,7 +197,8 @@
   &:nth-child(3) {
     top: 12px;
   }
-  &_publications{
+
+  &_publications {
     background: var(--main-regular);
   }
 }

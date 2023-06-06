@@ -424,6 +424,11 @@ img {
   line-height: 1.2;
 }
 
+@media screen and (min-width: 890px) {
+  .btn-desc_publications {
+    font-size: 30px;
+  }
+}
 .titles {
   font-weight: 700;
   font-size: 30px;
@@ -445,6 +450,12 @@ img {
   padding-bottom: 15px;
 }
 
+@media screen and (min-width: 890px) {
+  .titles_desc_publications {
+    font-size: 22px;
+    line-height: 1.23;
+  }
+}
 @media screen and (min-width: 890px) {
   .titles {
     font-size: 38px;
@@ -509,6 +520,10 @@ img {
     padding-top: 16px;
   }
 }
+.nav__list_publications {
+  padding-top: 0;
+}
+
 .nav__link {
   color: var(--active-regular);
   display: block;
@@ -520,29 +535,63 @@ img {
   background: var(--grey-bg);
   border-radius: 12px;
   min-width: calc(100vw - 24px);
+  position: relative;
 }
 
+@media screen and (min-width: 520px) {
+  .nav__link:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -5px;
+    background: var(--accent);
+    height: 2px;
+    width: 0;
+    z-index: -1;
+    border-radius: 100px;
+    opacity: 0;
+    transition: width 0.8s;
+  }
+}
+@media screen and (min-width: 520px) {
+  .nav__link:hover:after {
+    width: 100%;
+    opacity: 1;
+  }
+}
 @media screen and (min-width: 520px) {
   .nav__link {
     margin-bottom: 0;
     background: none;
     min-width: min-content;
+    color: #FFFFFF;
+    font-size: 16px;
   }
 }
-.nav__link:hover, .nav__link:focus {
+.nav__link:hover {
   color: var(--accent);
 }
 
 .nav__link:active {
   background: var(--grey-separator);
+  text-decoration: underline;
 }
 
 @media screen and (min-width: 520px) {
-  .nav__link {
-    color: #FFFFFF;
-    font-size: 16px;
+  .nav__link:active {
+    text-decoration: underline;
+    background: inherit;
   }
 }
+.nav__link_publications {
+  color: var(--active-regular);
+}
+
+.nav__link_publications_active {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
 @media screen and (min-width: 520px) {
   .nav {
     position: static;
@@ -565,6 +614,10 @@ img {
     display: none;
   }
 }
+.slash_publications {
+  display: flex;
+}
+
 .nav-switch {
   position: relative;
   display: block;
@@ -664,6 +717,12 @@ img {
   display: none;
 }
 
+@media screen and (min-width: 520px) {
+  .header_publications {
+    padding: 30px;
+    background: #fff;
+  }
+}
 .contacts {
   display: flex;
   flex-direction: row;
@@ -752,6 +811,18 @@ img {
   color: var(--grey-text);
 }
 
+@media screen and (min-width: 520px) {
+  .contacts_publications {
+    padding: 30px;
+    background: #fff;
+    display: flex;
+  }
+}
+@media screen and (min-width: 890px) {
+  .contacts_publications {
+    padding: 30px 0 15px;
+  }
+}
 .contacts-all, .contacts-desktop {
   display: flex;
   flex-direction: row;
@@ -822,11 +893,13 @@ img {
 .pinned__section_publications {
   color: var(--main-regular);
   padding-left: 6px;
+  display: flex;
 }
 
 .pinned_publications {
   background: #FFFFFF;
   width: 100%;
+  justify-content: space-between;
 }
 
 .logo {
@@ -1136,7 +1209,7 @@ img {
     display: grid;
     grid-template-columns: repeat(2, calc(50% - 30px));
     grid-template-rows: 73px auto auto;
-    justify-items: center;
+    justify-items: start;
     justify-content: center;
     padding-top: 30px;
   }
@@ -1150,7 +1223,7 @@ img {
   }
 }
 .desc_recommendations_publications {
-  border-radius: 12px 12px 0 0;
+  border-radius: 12px;
   padding-top: 30px;
 }
 
@@ -1200,7 +1273,6 @@ img {
 
 .desc__info-1_recommendations {
   font-size: 12px;
-  /*margin: 15px;*/
 }
 
 .desc__info-2 {
@@ -1223,6 +1295,11 @@ img {
   padding: 0 0 30px;
 }
 
+@media screen and (min-width: 890px) {
+  .desc__info-3_publications {
+    font-size: 16px;
+  }
+}
 .desc__info-3_light {
   border: none;
   color: var(--grey-text);
@@ -1251,6 +1328,7 @@ img {
   background: #FFFFFF;
   gap: 15px;
   padding: 0 30px 30px;
+  border-radius: 12px;
 }
 
 @media screen and (min-width: 767px) {
@@ -1367,8 +1445,14 @@ img {
 .photo-recommendations_page {
   border-radius: 12px;
   height: 300px;
+  width: 100%;
 }
 
+@media screen and (min-width: 890px) {
+  .photo-recommendations_page {
+    height: 500px;
+  }
+}
 .partners {
   padding: 0;
   margin: 0;
@@ -1552,7 +1636,7 @@ img {
   border-top: 2px solid var(--grey-separator);
 }
 
-@media screen and (min-width: 520px) {
+@media screen and (min-width: 767px) {
   .footer {
     display: flex;
     flex-direction: row;
@@ -1597,7 +1681,7 @@ img {
   color: var(--active-regular);
 }
 
-@media screen and (min-width: 520px) {
+@media screen and (min-width: 767px) {
   .footer__link_contacts:nth-child(1)::after {
     content: "●";
     position: absolute;
@@ -1626,6 +1710,17 @@ img {
     margin-top: -16px;
   }
 }
+.footer_publications {
+  flex-direction: column;
+  gap: 30px;
+}
+
+@media screen and (min-width: 890px) {
+  .footer_publications {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 .footer-1 {
   display: flex;
   flex-direction: column;
@@ -1638,7 +1733,7 @@ img {
   min-width: 50%;
 }
 
-@media screen and (min-width: 520px) {
+@media screen and (min-width: 767px) {
   .footer-1 {
     align-items: flex-start;
     gap: 21px;
@@ -1656,7 +1751,7 @@ img {
   gap: 10px;
 }
 
-@media screen and (min-width: 520px) {
+@media screen and (min-width: 767px) {
   .footer-city {
     display: flex;
     flex-direction: row;
@@ -1681,7 +1776,7 @@ img {
   gap: 10px;
 }
 
-@media screen and (min-width: 520px) {
+@media screen and (min-width: 767px) {
   .footer-contacts {
     display: flex;
     flex-direction: row;

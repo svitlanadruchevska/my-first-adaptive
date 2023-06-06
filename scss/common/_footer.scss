@@ -7,7 +7,7 @@
   gap: 20px;
   margin: 0;
   border-top: 2px solid var(--grey-separator);
-  @media screen and (min-width: 520px) {
+  @media screen and (min-width: 767px) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -51,7 +51,7 @@
     }
 
     &_contacts {
-      @media screen and (min-width: 520px) {
+      @media screen and (min-width: 767px) {
         &:nth-child(1)::after {
           content: "\25CF";
           position: absolute;
@@ -80,6 +80,15 @@
       margin-top: -16px;
     }
   }
+
+  &_publications {
+    flex-direction: column;
+    gap: 30px;
+    @media screen and (min-width: 890px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
 }
 
 .footer-1 {
@@ -92,7 +101,7 @@
   gap: 10px;
   padding-top: 30px;
   min-width: 50%;
-  @media screen and (min-width: 520px) {
+  @media screen and (min-width: 767px) {
     align-items: flex-start;
     gap: 21px;
   }
@@ -108,7 +117,7 @@
   justify-content: center;
   flex-direction: column;
   gap: 10px;
-  @media screen and (min-width: 520px) {
+  @media screen and (min-width: 767px) {
     display: flex;
     flex-direction: row;
     gap: 26px;
@@ -131,7 +140,7 @@
   justify-content: center;
   flex-direction: column;
   gap: 10px;
-  @media screen and (min-width: 520px) {
+  @media screen and (min-width: 767px) {
     display: flex;
     flex-direction: row;
     align-items: center;
