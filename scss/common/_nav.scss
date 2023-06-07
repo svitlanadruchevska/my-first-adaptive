@@ -25,7 +25,7 @@
     pointer-events: unset;
 
     &:active {
-      padding: 7px;
+      padding: 8px;
       background: var(--grey-separator);
       border-radius: 8px;
     }
@@ -45,7 +45,8 @@
     @media screen and (min-width: 767px) {
       padding-top: 16px;
     }
-    &_publications{
+
+    &_publications {
       padding-top: 0;
     }
   }
@@ -69,7 +70,7 @@
         display: block;
         position: absolute;
         bottom: -5px;
-        background: var(--accent);
+        background: #fff;
         height: 2px;
         width: 0;
         z-index: -1;
@@ -95,15 +96,13 @@
 
     }
 
-    &:hover {
+    &:current {
       color: var(--accent);
     }
 
     &:active {
       background: var(--grey-separator);
-      text-decoration: underline;
-      @media screen and (min-width: 520px) {
-        text-decoration: underline;
+       @media screen and (min-width: 520px) {
         background: inherit;
       }
     }
@@ -113,7 +112,15 @@
 
       &_active {
         color: var(--accent);
-        text-decoration: underline;
+        border-radius: 0;
+        border-bottom: 2px solid var(--accent);
+        padding-bottom: 3px;
+      }
+
+      &:after {
+        @media screen and (min-width: 520px) {
+          background: var(--active-regular);
+        }
       }
     }
   }

@@ -11,13 +11,11 @@
     padding: 9px;
     background: var(--grey-bg);
     border-radius: 12px;
-    &:hover, &:focus{
+
+    &:hover, &:focus {
       background: var(--grey-bg-alt);
       scale: 102%;
     }
   }
-
-  &__link {
-
-  }
 }
+

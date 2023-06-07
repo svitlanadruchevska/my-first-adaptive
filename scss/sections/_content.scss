@@ -8,6 +8,7 @@
     padding-top: 123px;
     padding-bottom: 261px;
     margin: 0;
+    position: relative;
     @media screen and (min-width: 520px) {
       display: flex;
       justify-content: center;
@@ -44,5 +45,25 @@
       font-size: 18px;
       line-height: 1.44;
     }
+  }
+}
+
+.content__img {
+  left: 50%;
+  margin-top: -90px;
+  transform: translateX(-50%);
+  position: absolute;
+  background: url("../../img/scroll.svg") no-repeat center bottom 15%;
+  height: 42px;
+  width: 42px;
+
+  &:hover, &:focus {
+    background: url("../../img/scroll-2.svg") no-repeat center bottom 15%;
+    scale: 110%;
+    transition: 1s;
+  }
+
+  @media screen and (min-width: 520px) {
+    margin-top: -135px;
   }
 }

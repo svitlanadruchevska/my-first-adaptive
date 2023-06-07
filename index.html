@@ -45,7 +45,7 @@
             </li>
             <li class="contacts__item contacts-desktop__item">
                 <a href="#" class="contacts__link contacts__link_mobile contacts__link_tablet">
-                    <img src="img/fb-grey.svg" alt="facebook">
+                    <img src="img/fb-grey.svg" class="fb-img" alt="facebook">
                 </a>
             </li>
         </ul>
@@ -100,6 +100,7 @@
         <p class="content__desc center">
             you legal solutions provider
         </p>
+        <span class="content__img"></span>
     </section>
     <section class="desc-nav-all">
         <section class="desc-nav">
@@ -148,9 +149,42 @@
         <section class="services-grid">
             <article class="services__item">
                 <img class="icon" src="img/ecommerce.svg" alt="icon">
-                <a href="#" class="services__link">
+                <a href="#modal_open" class="services__link">
                     IT and e-commerce
                 </a>
+                <section class="modal" id="modal_open">
+                    <div class="modal__content">
+                        <div class="modal-title">
+                            <a href="#close" id="close">
+                                <img src="img/close.svg" class="modal-img" alt="">
+                            </a>
+                            <h2 class="titles titles_modal">
+                                We would like to help you
+                            </h2>
+                        </div>
+                        <div class="modal__inputs">
+                            <label>
+                                <input type="text" name="name" class="modal__input" placeholder="Name">
+                            </label>
+                            <label>
+                                <textarea type="text" name="message" class="modal__input"
+                                          placeholder="Message"></textarea>
+                            </label>
+                            <p class="desc__info-1 desc__info-1_modal">
+                                How to answer you?
+                            </p>
+                            <label>
+                                <input type="tel" name="phone number" class="modal__input" placeholder="Phone number">
+                            </label>
+                            <label>
+                                <input type="email" name="email" class="modal__input" placeholder="Email">
+                            </label>
+                            <button class="btn">
+                                Send message
+                            </button>
+                        </div>
+                    </div>
+                </section>
                 <p class="services__desc">
                     An endless stream of contracts, tax issues, labor relations, corporate papers - legal work
                     distracts
@@ -159,7 +193,7 @@
             </article>
             <article class="services__item">
                 <img class="icon" src="img/support.svg" alt="icon">
-                <a href="#" class="services__link">
+                <a href="#modal_open" class="services__link">
                     Comprehensive daily legal support
                 </a>
                 <p class="services__desc">
@@ -172,7 +206,7 @@
             </article>
             <article class="services__item">
                 <img class="icon" src="img/coprorate.svg" alt="icon">
-                <a href="#" class="services__link">
+                <a href="#modal_open" class="services__link">
                     Structuring corporate relationships
                 </a>
                 <p class="services__desc">
@@ -183,7 +217,7 @@
             </article>
             <article class="services__item">
                 <img class="icon" src="img/trust.svg" alt="icon">
-                <a href="#" class="services__link">
+                <a href="#modal_open" class="services__link">
                     IT and e-commerce
                 </a>
                 <p class="services__desc">
@@ -194,7 +228,7 @@
             </article>
             <article class="services__item">
                 <img class="icon" src="img/protection.svg" alt="icon">
-                <a href="#" class="services__link">
+                <a href="#modal_open" class="services__link">
                     Protection of business, intellectual property
                 </a>
                 <p class="services__desc">
@@ -207,7 +241,7 @@
             </article>
             <article class="services__item">
                 <img class="icon" src="img/court.svg" alt="icon">
-                <a href="#" class="services__link">
+                <a href="#modal_open" class="services__link">
                     Judicial representation
                 </a>
                 <p class="services__desc">
@@ -226,7 +260,8 @@
             команда >
         </a>
         <h2 class="titles titles_desc">
-            Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну допомогу, навіть у ситуаціях,
+            Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну допомогу, навіть у
+            ситуаціях,
             коли
             більшість безсилі.
         </h2>
@@ -339,7 +374,8 @@
                     April 22
                 </p>
                 <p class="desc__info-3">
-                    I'm a jun on projects. I am a co-owner of a law firm. How it happened. Before entering my parents
+                    I'm a jun on projects. I am a co-owner of a law firm. How it happened. Before entering my
+                    parents
                     told
                     me
                     that if I…
@@ -358,7 +394,8 @@
                     September 29
                 </p>
                 <p class="desc__info-3">
-                    And why the recovery of 50 million euros could be a fateful precedent According to Mind.ua January
+                    And why the recovery of 50 million euros could be a fateful precedent According to Mind. ua
+                    January
                     21
                     National Commission for Data Protection.
                 </p>
@@ -376,7 +413,8 @@
                     August 19
                 </p>
                 <p class="desc__info-3">
-                    What and how modern vloggers, opinion leaders and crypto-millionaires will inherit A typical legacy
+                    What and how modern vloggers, opinion leaders and crypto-millionaires will inherit A typical
+                    legacy
                     of
                     the Ukrainian generation X looks like this: an apartment in…
                 </p>
@@ -390,7 +428,7 @@
             <a href="#" class="footer__link">
                 Kyiv, Mechnikova str., 14/1
             </a>
-            <a href="https://goo.gl/maps/npccWT2TVzdDDV5m7" class="footer__link" target="blank">
+            <a href="https://goo.gl/maps/npccWT2TVzdDDV5m7" class="footer__link footer__link_map" target="blank">
                 On map
             </a>
         </div>
@@ -398,7 +436,7 @@
             <a href="#" class="footer__link footer__link_contacts">
                 <img src="img/fb.svg" class="footer-img" alt="fb">
             </a>
-            <a href="#" class="footer__link footer__link_contacts">
+            <a href="#" class="footer__link footer__link_contacts_number">
                 0800 211 927
             </a>
             <a href="#" class="footer__link footer__link_contacts">

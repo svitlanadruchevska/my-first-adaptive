@@ -28,29 +28,9 @@
       color: var(--main-regular);
     }
 
-    &:nth-child(2) {
-      font-weight: 700;
-      font-size: 12px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: var(--active-regular);
-    }
-
-    &:nth-child(3) {
-      transform: rotate(360deg);
-    }
-
-    &:nth-child(4) {
-      font-weight: 700;
-      color: var(--main-alt);
-    }
-
-    &:nth-child(5) {
-      font-weight: 700;
-      color: var(--active-regular);
-    }
-
     &_contacts {
+      font-weight: 700;
+      color: var(--active-regular);
       @media screen and (min-width: 767px) {
         &:nth-child(1)::after {
           content: "\25CF";
@@ -63,12 +43,34 @@
         &:nth-child(2)::after {
           content: "\25CF";
           position: absolute;
-          left: 163px;
           top: 11px;
           font-size: 15px;
           color: var(--grey-text);
         }
       }
+
+      &_number {
+        color: var(--main-alt);
+        font-weight: 700;
+        font-size: 16px;
+        @media screen and (min-width: 767px) {
+          &::after {
+            content: "\25CF";
+            position: absolute;
+            left: 176px;
+            font-size: 15px;
+            color: var(--grey-text);
+          }
+        }
+      }
+    }
+
+    &_map {
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--active-regular);
     }
   }
 
@@ -79,17 +81,18 @@
     @media screen and (min-width: 520px) {
       margin-top: -16px;
     }
-  }
 
-  &_publications {
-    flex-direction: column;
-    gap: 30px;
-    @media screen and (min-width: 890px) {
-      flex-direction: row;
-      justify-content: space-between;
+    &_publications {
+      flex-direction: column;
+      gap: 30px;
+      @media screen and (min-width: 890px) {
+        flex-direction: row;
+        justify-content: space-between;
+      }
     }
   }
 }
+
 
 .footer-1 {
   display: flex;
@@ -132,6 +135,11 @@
       color: var(--grey-text);
     }
   }
+
+  &:first-child {
+    font-size: 16px;
+    color: var(--main-regular);
+  }
 }
 
 .footer-contacts {
@@ -147,6 +155,10 @@
     justify-content: left;
     gap: 26px;
     position: relative;
+  }
+
+  &:hover, &:focus {
+    color: var(--accent);
   }
 }
 

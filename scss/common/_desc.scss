@@ -76,6 +76,11 @@
     &_recommendations {
       font-size: 12px;
     }
+    &_modal{
+      font-size: 14px;
+      text-align: left;
+      padding: 15px 0 15px;
+    }
   }
 
   &__info-2 {
@@ -106,7 +111,6 @@
       padding: 15px 0 30px;
     }
   }
-
 }
 
 .desc-all {

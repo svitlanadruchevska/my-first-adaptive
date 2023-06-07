@@ -69,13 +69,27 @@
   &__item {
     position: relative;
 
-    &_en::after {
-      @media screen and (min-width: 520px) {
-        content: "\25CF";
-        position: absolute;
-        right: -15px;
-        font-size: 15px;
-        color: #fff;
+    &_en {
+      &::after {
+        @media screen and (min-width: 520px) {
+          content: "\25CF";
+          position: absolute;
+          right: -15px;
+          font-size: 15px;
+          color: #fff;
+        }
+      }
+
+      &_publications {
+        &::after {
+          @media screen and (min-width: 520px) {
+            content: "\25CF";
+            position: absolute;
+            right: -15px;
+            font-size: 15px;
+            color: var(--grey-separator);
+          }
+        }
       }
     }
   }
@@ -88,11 +102,6 @@
     text-decoration: none;
     color: #fff;
 
-    &_tablet {
-      @media screen and (min-width: 520px) {
-        list-style: disc;
-      }
-    }
 
     &_phone {
       font-size: 16px;
@@ -140,7 +149,6 @@
   }
 }
 
-
 .contacts-all, .contacts-desktop {
   display: flex;
   flex-direction: row;
@@ -150,7 +158,6 @@
   padding: 0;
   margin: 0;
 }
-
 
 .contacts-desktop {
   @media screen and (min-width: 520px) {
@@ -169,6 +176,18 @@
         right: -13px;
         font-size: 15px;
         color: #fff;
+      }
+    }
+
+    &_publications {
+      @media screen and (min-width: 520px) {
+        &:not(:last-child)::after {
+          content: "\25CF";
+          position: absolute;
+          right: -13px;
+          font-size: 15px;
+          color: var(--grey-separator);
+        }
       }
     }
   }
@@ -207,7 +226,6 @@
 
     &_publications {
       color: var(--main-regular);
-      padding-left: 6px;
       display: flex;
     }
   }
@@ -216,6 +234,7 @@
     background: #FFFFFF;
     width: 100%;
     justify-content: space-between;
+    align-items: center;
   }
 }
 
@@ -228,6 +247,10 @@
 .slash {
   width: 12px;
   height: 26px;
+
+  &_publications {
+    margin-left: 65px;
+  }
 }
 
 .header-logo {
@@ -240,6 +263,13 @@
     padding-top: 0;
     margin-top: -24px;
   }
+}
+
+.pinned-logo {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  gap: 4px;
 }
 
 
