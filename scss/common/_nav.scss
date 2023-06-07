@@ -39,10 +39,8 @@
     margin: 0;
     padding: 0;
     gap: 15px;
-    @media screen and (min-width: 520px) {
-      flex-direction: row;
-    }
     @media screen and (min-width: 767px) {
+      flex-direction: row;
       padding-top: 16px;
     }
 
@@ -65,7 +63,7 @@
     position: relative;
 
     &:after {
-      @media screen and (min-width: 520px) {
+      @media screen and (min-width: 767px) {
         content: '';
         display: block;
         position: absolute;
@@ -81,13 +79,13 @@
     }
 
     &:hover:after {
-      @media screen and (min-width: 520px) {
+      @media screen and (min-width: 767px) {
         width: 100%;
         opacity: 1;
       }
     }
 
-    @media screen and (min-width: 520px) {
+    @media screen and (min-width: 767px) {
       margin-bottom: 0;
       background: none;
       min-width: min-content;
@@ -102,7 +100,7 @@
 
     &:active {
       background: var(--grey-separator);
-       @media screen and (min-width: 520px) {
+       @media screen and (min-width: 767px) {
         background: inherit;
       }
     }
@@ -118,14 +116,14 @@
       }
 
       &:after {
-        @media screen and (min-width: 520px) {
+        @media screen and (min-width: 767px) {
           background: var(--active-regular);
         }
       }
     }
   }
 
-  @media screen and (min-width: 520px) {
+  @media screen and (min-width: 767px) {
     position: static;
     width: auto;
     height: auto;
@@ -179,7 +177,7 @@
     }
   }
 
-  @media screen and (min-width: 520px) {
+  @media screen and (min-width: 767px) {
     display: none;
   }
 }

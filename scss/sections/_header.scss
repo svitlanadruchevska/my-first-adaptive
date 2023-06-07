@@ -41,6 +41,12 @@
       background: #fff;
     }
   }
+
+  &_services {
+    &:before {
+      display: none;
+    }
+  }
 }
 
 .contacts {
@@ -108,10 +114,10 @@
     }
 
     &_mobile {
-      @media screen and (max-width: 520px) {
+      @media screen and (max-width: 767px) {
         display: none;
       }
-      @media screen and (min-width: 520px) {
+      @media screen and (min-width: 767px) {
         font-weight: 400;
         font-size: 16px;
         line-height: 1.25;
@@ -134,11 +140,14 @@
 
     &_publications {
       color: var(--grey-text);
+
     }
   }
 
   &_publications {
-    @media screen and (min-width: 520px) {
+    padding: 0 15px;
+    background: #fff;
+    @media screen and (min-width: 767px) {
       padding: 30px;
       background: #fff;
       display: flex;
@@ -249,7 +258,10 @@
   height: 26px;
 
   &_publications {
-    margin-left: 65px;
+    margin-left: 0;
+    @media screen and (min-width: 767px) {
+      margin-left: 65px;
+    }
   }
 }
 
